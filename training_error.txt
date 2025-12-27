@@ -1,0 +1,590 @@
+=== STDOUT ===
+[12/22/25 10:38:12] WARNING  The model will be flagged to    recognition.py:293
+                             use new polygon extractor.                        
+[12/22/25 10:38:13] WARNING  Neural network has been trained on    train.py:639
+                             mode L images, training set contains              
+                             mode 1 data. Consider setting                     
+                             `force_binarization`                              
++-----------------------------------------------------------------------------+
+|    | Name      | Type         | Params | Mode  |     In sizes |   Out sizes |
+|----+-----------+--------------+--------+-------+--------------+-------------|
+| 0  | val_cer   | CharErrorRa� |      0 | train |            ? |           ? |
+| 1  | val_wer   | WordErrorRa� |      0 | train |            ? |           ? |
+| 2  | net       | MultiParamS� |  4.1 M | train | [[1, 1, 120, |   [[1, 235, |
+|    |           |              |        |       |   400], '?'] |     1, 50], |
+|    |           |              |        |       |              |        '?'] |
+| 3  | net.C_0   | ActConv2D    |  1.3 K | train | [[1, 1, 120, |    [[1, 32, |
+|    |           |              |        |       |   400], '?', |  120, 400], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 4  | net.Do_1  | Dropout      |      0 | train |     [[1, 32, |    [[1, 32, |
+|    |           |              |        |       |   120, 400], |  120, 400], |
+|    |           |              |        |       |    '?', '?'] |        '?'] |
+| 5  | net.Mp_2  | MaxPool      |      0 | train |     [[1, 32, |    [[1, 32, |
+|    |           |              |        |       |   120, 400], |   60, 200], |
+|    |           |              |        |       |    '?', '?'] |        '?'] |
+| 6  | net.C_3   | ActConv2D    | 40.0 K | train | [[1, 32, 60, |    [[1, 32, |
+|    |           |              |        |       |   200], '?', |   60, 200], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 7  | net.Do_4  | Dropout      |      0 | train | [[1, 32, 60, |    [[1, 32, |
+|    |           |              |        |       |   200], '?', |   60, 200], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 8  | net.Mp_5  | MaxPool      |      0 | train | [[1, 32, 60, |    [[1, 32, |
+|    |           |              |        |       |   200], '?', |   30, 100], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 9  | net.C_6   | ActConv2D    | 55.4 K | train | [[1, 32, 30, |    [[1, 64, |
+|    |           |              |        |       |   100], '?', |   30, 100], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 10 | net.Do_7  | Dropout      |      0 | train | [[1, 64, 30, |    [[1, 64, |
+|    |           |              |        |       |   100], '?', |   30, 100], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 11 | net.Mp_8  | MaxPool      |      0 | train | [[1, 64, 30, |    [[1, 64, |
+|    |           |              |        |       |   100], '?', |    15, 50], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 12 | net.C_9   | ActConv2D    |  110 K | train | [[1, 64, 15, |    [[1, 64, |
+|    |           |              |        |       |    50], '?', |    15, 50], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 13 | net.Do_10 | Dropout      |      0 | train | [[1, 64, 15, |    [[1, 64, |
+|    |           |              |        |       |    50], '?', |    15, 50], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 14 | net.S_11  | Reshape      |      0 | train | [[1, 64, 15, |   [[1, 960, |
+|    |           |              |        |       |    50], '?', |     1, 50], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 15 | net.L_12  | TransposedS� |  1.9 M | train | [[1, 960, 1, |   [[1, 400, |
+|    |           |              |        |       |    50], '?', |     1, 50], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 16 | net.Do_13 | Dropout      |      0 | train | [[1, 400, 1, |   [[1, 400, |
+|    |           |              |        |       |    50], '?', |     1, 50], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 17 | net.L_14  | TransposedS� |  963 K | train | [[1, 400, 1, |   [[1, 400, |
+|    |           |              |        |       |    50], '?', |     1, 50], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 18 | net.Do_15 | Dropout      |      0 | train | [[1, 400, 1, |   [[1, 400, |
+|    |           |              |        |       |    50], '?', |     1, 50], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 19 | net.L_16  | TransposedS� |  963 K | train | [[1, 400, 1, |   [[1, 400, |
+|    |           |              |        |       |    50], '?', |     1, 50], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 20 | net.Do_17 | Dropout      |      0 | train | [[1, 400, 1, |   [[1, 400, |
+|    |           |              |        |       |    50], '?', |     1, 50], |
+|    |           |              |        |       |         '?'] |        '?'] |
+| 21 | net.O_18  | LinSoftmax   | 94.2 K | train | [[1, 400, 1, |   [[1, 235, |
+|    |           |              |        |       |    50], '?', |     1, 50], |
+|    |           |              |        |       |         '?'] |        '?'] |
++-----------------------------------------------------------------------------+
+Trainable params: 4.1 M                                                        
+Non-trainable params: 0                                                        
+Total params: 4.1 M                                                            
+Total estimated model params size (MB): 16                                     
+Modules in train mode: 40                                                      
+Modules in eval mode: 0                                                        
+
+
+=== STDERR ===
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+`Trainer(val_check_interval=1.0)` was configured so validation will run at the end of the training epoch..
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Seed set to 42
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\trainer\call.py:47 in _call_and_handle_interrupt                        |
+|                                                                             |
+|    44     try:                                                              |
+|    45         if trainer.strategy.launcher is not None:                     |
+|    46             return trainer.strategy.launcher.launch(trainer_fn, *args |
+| >  47         return trainer_fn(*args, **kwargs)                            |
+|    48                                                                       |
+|    49     except _TunerExitException:                                       |
+|    50         _call_teardown_hook(trainer)                                  |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\trainer\trainer.py:574 in _fit_impl                                     |
+|                                                                             |
+|    571             model_provided=True,                                     |
+|    572             model_connected=self.lightning_module is not None,       |
+|    573         )                                                            |
+| >  574         self._run(model, ckpt_path=ckpt_path)                        |
+|    575                                                                      |
+|    576         assert self.state.stopped                                    |
+|    577         self.training = False                                        |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\trainer\trainer.py:981 in _run                                          |
+|                                                                             |
+|    978         # ----------------------------                               |
+|    979         # RUN THE TRAINER                                            |
+|    980         # ----------------------------                               |
+| >  981         results = self._run_stage()                                  |
+|    982                                                                      |
+|    983         # ----------------------------                               |
+|    984         # POST-Training CLEAN UP                                     |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\trainer\trainer.py:1025 in _run_stage                                   |
+|                                                                             |
+|   1022             with isolate_rng():                                      |
+|   1023                 self._run_sanity_check()                             |
+|   1024             with torch.autograd.set_detect_anomaly(self._detect_anom |
+| > 1025                 self.fit_loop.run()                                  |
+|   1026             return None                                              |
+|   1027         raise RuntimeError(f"Unexpected state {self.state}")         |
+|   1028                                                                      |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\loops\fit_loop.py:205 in run                                            |
+|                                                                             |
+|   202         while not self.done:                                          |
+|   203             try:                                                      |
+|   204                 self.on_advance_start()                               |
+| > 205                 self.advance()                                        |
+|   206                 self.on_advance_end()                                 |
+|   207                 self._restarting = False                              |
+|   208             except StopIteration:                                     |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\loops\fit_loop.py:363 in advance                                        |
+|                                                                             |
+|   360             )                                                         |
+|   361         with self.trainer.profiler.profile("run_training_epoch"):     |
+|   362             assert self._data_fetcher is not None                     |
+| > 363             self.epoch_loop.run(self._data_fetcher)                   |
+|   364                                                                       |
+|   365     def on_advance_end(self) -> None:                                 |
+|   366         trainer = self.trainer                                        |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\loops\training_epoch_loop.py:140 in run                                 |
+|                                                                             |
+|   137         self.on_run_start(data_fetcher)                               |
+|   138         while not self.done:                                          |
+|   139             try:                                                      |
+| > 140                 self.advance(data_fetcher)                            |
+|   141                 self.on_advance_end(data_fetcher)                     |
+|   142                 self._restarting = False                              |
+|   143             except StopIteration:                                     |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\loops\training_epoch_loop.py:212 in advance                             |
+|                                                                             |
+|   209             batch_idx = data_fetcher._batch_idx                       |
+|   210         else:                                                         |
+|   211             dataloader_iter = None                                    |
+| > 212             batch, _, __ = next(data_fetcher)                         |
+|   213             # TODO: we should instead use the batch_idx returned by t |
+|   214             # fetcher state so that the batch_idx is correct after re |
+|   215             batch_idx = self.batch_idx + 1                            |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\loops\fetchers.py:133 in __next__                                       |
+|                                                                             |
+|   130                 self.done = not self.batches                          |
+|   131         elif not self.done:                                           |
+|   132             # this will run only when no pre-fetching was done.       |
+| > 133             batch = super().__next__()                                |
+|   134         else:                                                         |
+|   135             # the iterator is empty                                   |
+|   136             raise StopIteration                                       |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\loops\fetchers.py:60 in __next__                                        |
+|                                                                             |
+|    57         assert self.iterator is not None                              |
+|    58         self._start_profiler()                                        |
+|    59         try:                                                          |
+| >  60             batch = next(self.iterator)                               |
+|    61         except StopIteration:                                         |
+|    62             self.done = True                                          |
+|    63             raise                                                     |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\utilities\combined_loader.py:341 in __next__                            |
+|                                                                             |
+|   338                                                                       |
+|   339     def __next__(self) -> _ITERATOR_RETURN:                           |
+|   340         assert self._iterator is not None                             |
+| > 341         out = next(self._iterator)                                    |
+|   342         if isinstance(self._iterator, _Sequential):                   |
+|   343             return out                                                |
+|   344         out, batch_idx, dataloader_idx = out                          |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\utilities\combined_loader.py:78 in __next__                             |
+|                                                                             |
+|    75         out = [None] * n  # values per iterator                       |
+|    76         for i in range(n):                                            |
+|    77             try:                                                      |
+| >  78                 out[i] = next(self.iterators[i])                      |
+|    79             except StopIteration:                                     |
+|    80                 self._consumed[i] = True                              |
+|    81                 if all(self._consumed):                               |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\torch\utils\da |
+| ta\dataloader.py:733 in __next__                                            |
+|                                                                             |
+|    730             if self._sampler_iter is None:                           |
+|    731                 # TODO(https://github.com/pytorch/pytorch/issues/767 |
+|    732                 self._reset()  # type: ignore[call-arg]              |
+| >  733             data = self._next_data()                                 |
+|    734             self._num_yielded += 1                                   |
+|    735             if (                                                     |
+|    736                 self._dataset_kind == _DatasetKind.Iterable          |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\torch\utils\da |
+| ta\dataloader.py:1515 in _next_data                                         |
+|                                                                             |
+|   1512             else:                                                    |
+|   1513                 worker_id = self._task_info.pop(idx)[0]              |
+|   1514                 self._rcvd_idx += 1                                  |
+| > 1515                 return self._process_data(data, worker_id)           |
+|   1516                                                                      |
+|   1517     def _try_put_index(self):                                        |
+|   1518         max_tasks = self._prefetch_factor * self._num_workers        |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\torch\utils\da |
+| ta\dataloader.py:1550 in _process_data                                      |
+|                                                                             |
+|   1547         self._workers_num_tasks[worker_idx] -= 1                     |
+|   1548         self._try_put_index()                                        |
+|   1549         if isinstance(data, ExceptionWrapper):                       |
+| > 1550             data.reraise()                                           |
+|   1551         return data                                                  |
+|   1552                                                                      |
+|   1553     def _mark_worker_as_unavailable(self, worker_id, shutdown=False) |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\torch\_utils.p |
+| y:750 in reraise                                                            |
+|                                                                             |
+|    747             # If the exception takes multiple arguments or otherwise |
+|    748             # be constructed, don't try to instantiate since we don' |
+|    749             raise RuntimeError(msg) from None                        |
+| >  750         raise exception                                              |
+|    751                                                                      |
+|    752                                                                      |
+|    753 def _get_available_device_type():                                    |
++-----------------------------------------------------------------------------+
+ValueError: Caught ValueError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "C:\AR 
+team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\torch\utils\data\_
+utils\worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\AR 
+team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\torch\utils\data\_
+utils\fetch.py", line 50, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AR 
+team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\torch\utils\data\d
+ataset.py", line 416, in __getitems__
+    return [self.dataset[self.indices[idx]] for idx in indices]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AR 
+team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\torch\utils\data\d
+ataset.py", line 416, in <listcomp>
+    return [self.dataset[self.indices[idx]] for idx in indices]
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\AR 
+team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\kraken\lib\dataset
+\recognition.py", line 656, in __getitem__
+    im = self.transforms(im)
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\AR 
+team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\torchvision\transf
+orms\transforms.py", line 95, in __call__
+    img = t(img)
+          ^^^^^^
+  File "C:\AR 
+team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\torchvision\transf
+orms\transforms.py", line 479, in __call__
+    return self.lambd(img)
+           ^^^^^^^^^^^^^^^
+  File "C:\AR 
+team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\kraken\lib\functio
+nal_im_transforms.py", line 51, in pil_dewarp
+    return dewarp(lnorm, im)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\AR 
+team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\kraken\lib\lineest
+.py", line 86, in dewarp
+    line = normalizer.normalize(line, cval=np.amax(line))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AR 
+team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\kraken\lib\lineest
+.py", line 60, in normalize
+    dewarped = self.dewarp(img, cval=cval, dtype=dtype)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AR 
+team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\kraken\lib\lineest
+.py", line 56, in dewarp
+    dewarped = np.array(dewarped, dtype=dtype).T
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: setting an array element with a sequence. The requested array has 
+an inhomogeneous shape after 1 dimensions. The detected shape was (180,) + 
+inhomogeneous part.
+
+
+During handling of the above exception, another exception occurred:
+
++--------------------- Traceback (most recent call last) ---------------------+
+| in _run_module_as_main:198                                                  |
+| in _run_code:88                                                             |
+|                                                                             |
+| in <module>:7                                                               |
+|                                                                             |
+|   4 from kraken.ketos import cli                                            |
+|   5 if __name__ == '__main__':                                              |
+|   6     sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])    |
+| > 7     sys.exit(cli())                                                     |
+|   8                                                                         |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\click\core.py: |
+| 1442 in __call__                                                            |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\click\core.py: |
+| 1363 in main                                                                |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\click\core.py: |
+| 1830 in invoke                                                              |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\click\core.py: |
+| 1226 in invoke                                                              |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\click\core.py: |
+| 794 in invoke                                                               |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\click\decorato |
+| rs.py:34 in new_func                                                        |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\kraken\ketos\r |
+| ecognition.py:313 in train                                                  |
+|                                                                             |
+|   310                             **val_check_interval)                     |
+|   311     try:                                                              |
+|   312         with threadpool_limits(limits=ctx.meta['threads']):           |
+| > 313             trainer.fit(model)                                        |
+|   314     except KrakenInputException as e:                                 |
+|   315         if e.args[0].startswith('Training data and model codec alphab |
+|   316             raise click.BadOptionUsage('resize', 'Mismatched training |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\kraken\lib\tra |
+| in.py:129 in fit                                                            |
+|                                                                             |
+|    126         with warnings.catch_warnings():                              |
+|    127             warnings.filterwarnings(action='ignore', category=UserWa |
+|    128                                     message='The dataloader,')       |
+| >  129             super().fit(*args, **kwargs)                             |
+|    130                                                                      |
+|    131                                                                      |
+|    132 class KrakenFreezeBackbone(BaseFinetuning):                          |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\trainer\trainer.py:538 in fit                                           |
+|                                                                             |
+|    535         self.state.fn = TrainerFn.FITTING                            |
+|    536         self.state.status = TrainerStatus.RUNNING                    |
+|    537         self.training = True                                         |
+| >  538         call._call_and_handle_interrupt(                             |
+|    539             self, self._fit_impl, model, train_dataloaders, val_data |
+|    540         )                                                            |
+|    541                                                                      |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\trainer\call.py:67 in _call_and_handle_interrupt                        |
+|                                                                             |
+|    64         exit(1)                                                       |
+|    65                                                                       |
+|    66     except BaseException as exception:                                |
+| >  67         _interrupt(trainer, exception)                                |
+|    68         trainer._teardown()                                           |
+|    69         # teardown might access the stage so we reset it after        |
+|    70         trainer.state.stage = None                                    |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\trainer\call.py:76 in _interrupt                                        |
+|                                                                             |
+|    73                                                                       |
+|    74 def _interrupt(trainer: "pl.Trainer", exception: BaseException) -> No |
+|    75     trainer.state.status = TrainerStatus.INTERRUPTED                  |
+| >  76     _call_callback_hooks(trainer, "on_exception", exception)          |
+|    77     if trainer.datamodule is not None:                                |
+|    78         _call_lightning_datamodule_hook(trainer, "on_exception", exce |
+|    79     trainer.strategy.on_exception(exception)                          |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\trainer\call.py:218 in _call_callback_hooks                             |
+|                                                                             |
+|   215         fn = getattr(callback, hook_name)                             |
+|   216         if callable(fn):                                              |
+|   217             with trainer.profiler.profile(f"[Callback]{callback.state |
+| > 218                 fn(trainer, trainer.lightning_module, *args, **kwargs |
+|   219                                                                       |
+|   220     if pl_module:                                                     |
+|   221         # restore current_fx when nested context                      |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\callbacks\progress\rich_progress.py:638 in on_exception                 |
+|                                                                             |
+|   635         pl_module: "pl.LightningModule",                              |
+|   636         exception: BaseException,                                     |
+|   637     ) -> None:                                                        |
+| > 638         self._stop_progress()                                         |
+|   639                                                                       |
+|   640     def configure_columns(self, trainer: "pl.Trainer") -> list:       |
+|   641         return [                                                      |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\lightning\pyto |
+| rch\callbacks\progress\rich_progress.py:611 in _stop_progress               |
+|                                                                             |
+|   608                                                                       |
+|   609     def _stop_progress(self) -> None:                                 |
+|   610         if self.progress is not None:                                 |
+| > 611             self.progress.stop()                                      |
+|   612             # # signals for progress to be re-initialized for next st |
+|   613             self._progress_stopped = True                             |
+|   614                                                                       |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\rich\progress. |
+| py:1177 in stop                                                             |
+|                                                                             |
+|   1174                                                                      |
+|   1175     def stop(self) -> None:                                          |
+|   1176         """Stop the progress display."""                             |
+| > 1177         self.live.stop()                                             |
+|   1178         if not self.console.is_interactive and not self.console.is_j |
+|   1179             self.console.print()                                     |
+|   1180                                                                      |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\rich\live.py:1 |
+| 47 in stop                                                                  |
+|                                                                             |
+|   144                 self._refresh_thread = None                           |
+|   145             # allow it to fully render on the last even if overflow   |
+|   146             self.vertical_overflow = "visible"                        |
+| > 147             with self.console:                                        |
+|   148                 try:                                                  |
+|   149                     if not self._alt_screen and not self.console.is_j |
+|   150                         self.refresh()                                |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\rich\console.p |
+| y:866 in __exit__                                                           |
+|                                                                             |
+|    863                                                                      |
+|    864     def __exit__(self, exc_type: Any, exc_value: Any, traceback: Any |
+|    865         """Exit buffer context."""                                   |
+| >  866         self._exit_buffer()                                          |
+|    867                                                                      |
+|    868     def begin_capture(self) -> None:                                 |
+|    869         """Begin capturing console output. Call :meth:`end_capture`  |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\rich\console.p |
+| y:824 in _exit_buffer                                                       |
+|                                                                             |
+|    821     def _exit_buffer(self) -> None:                                  |
+|    822         """Leave buffer context, and render content if required."""  |
+|    823         self._buffer_index -= 1                                      |
+| >  824         self._check_buffer()                                         |
+|    825                                                                      |
+|    826     def set_live(self, live: "Live") -> None:                        |
+|    827         """Set Live instance. Used by Live context manager.          |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\rich\console.p |
+| y:2033 in _check_buffer                                                     |
+|                                                                             |
+|   2030             return                                                   |
+|   2031                                                                      |
+|   2032         try:                                                         |
+| > 2033             self._write_buffer()                                     |
+|   2034         except BrokenPipeError:                                      |
+|   2035             self.on_broken_pipe()                                    |
+|   2036                                                                      |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\rich\console.p |
+| y:2069 in _write_buffer                                                     |
+|                                                                             |
+|   2066                             if self.no_color and self._color_system: |
+|   2067                                 buffer = list(Segment.remove_color(b |
+|   2068                                                                      |
+| > 2069                             legacy_windows_render(buffer, LegacyWind |
+|   2070                         else:                                        |
+|   2071                             # Either a non-std stream on legacy Wind |
+|   2072                             text = self._render_buffer(self._buffer[ |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\rich\_windows_ |
+| renderer.py:19 in legacy_windows_render                                     |
+|                                                                             |
+|   16             if style:                                                  |
+|   17                 term.write_styled(text, style)                         |
+|   18             else:                                                      |
+| > 19                 term.write_text(text)                                  |
+|   20         else:                                                          |
+|   21             control_codes: Sequence[ControlCode] = control             |
+|   22             for control_code in control_codes:                         |
+|                                                                             |
+| C:\AR                                                                       |
+| team\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\rich\_win32_co |
+| nsole.py:402 in write_text                                                  |
+|                                                                             |
+|   399         Args:                                                         |
+|   400             text (str): The text to write to the console              |
+|   401         """                                                           |
+| > 402         self.write(text)                                              |
+|   403         self.flush()                                                  |
+|   404                                                                       |
+|   405     def write_styled(self, text: str, style: Style) -> None:          |
+|                                                                             |
+| C:\Users\AR                                                                 |
+| Machine\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py:19  |
+| in encode                                                                   |
+|                                                                             |
+|    16                                                                       |
+|    17 class IncrementalEncoder(codecs.IncrementalEncoder):                  |
+|    18     def encode(self, input, final=False):                             |
+| >  19         return codecs.charmap_encode(input,self.errors,encoding_table |
+|    20                                                                       |
+|    21 class IncrementalDecoder(codecs.IncrementalDecoder):                  |
+|    22     def decode(self, input, final=False):                             |
++-----------------------------------------------------------------------------+
+UnicodeEncodeError: 'charmap' codec can't encode character '\u221e' in position
+8: character maps to <undefined>
+
+
+Return code: 1

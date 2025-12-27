@@ -1,0 +1,287 @@
+NumExpr defaulting to 14 threads.
+scikit-learn version 1.7.0 is not supported. Minimum required version: 0.17. Maximum required version: 1.1.2. Disabling scikit-learn conversion API.
+2025-12-15 21:58:47.411859: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-12-15 21:58:49.089376: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+matplotlib data path: C:\Users\AliTaghavi\AppData\Local\Programs\Python\Python311\Lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\AliTaghavi\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\AliTaghavi\.matplotlib
+Using fontManager instance from C:\Users\AliTaghavi\.matplotlib\fontlist-v390.json
+TensorFlow version 2.18.0 has not been tested with coremltools. You may run into unexpected errors. TensorFlow 2.12.0 is the most recent version that has been tested.
+Torch version 2.1.2+cpu has not been tested with coremltools. You may run into unexpected errors. Torch 2.0.0 is the most recent version that has been tested.
+Registering Dialect op complex
+Registering Dialect op complex_real
+Registering Dialect op complex_imag
+Registering Dialect op complex_fft
+Registering Dialect op complex_fftn
+Registering Dialect op complex_rfft
+Registering Dialect op complex_rfftn
+Registering Dialect op complex_ifft
+Registering Dialect op complex_ifftn
+Registering Dialect op complex_irfft
+Registering Dialect op complex_irfftn
+Registering Dialect op complex_shape
+Registering op abs
+Registering op acos
+Registering op asin
+Registering op atan
+Registering op atanh
+Registering op ceil
+Registering op clip
+Registering op cos
+Registering op cosh
+Registering op erf
+Registering op exp
+Registering op exp2
+Registering op floor
+Registering op inverse
+Registering op log
+Registering op logical_not
+Registering op round
+Registering op rsqrt
+Registering op sign
+Registering op sin
+Registering op sinh
+Registering op sqrt
+Registering op square
+Registering op tan
+Registering op tanh
+Registering op threshold
+Registering op cast
+Registering op clamped_relu
+Registering op elu
+Registering op gelu
+Registering op leaky_relu
+Registering op linear_activation
+Registering op prelu
+Registering op relu
+Registering op relu6
+Registering op scaled_tanh
+Registering op sigmoid
+Registering op sigmoid_hard
+Registering op silu
+Registering op softplus
+Registering op softplus_parametric
+Registering op softmax
+Registering op softsign
+Registering op thresholded_relu
+Registering op classify
+Registering op cond
+Registering op const
+Registering op _const_symbolic
+Registering op select
+Registering op while_loop
+Registering op make_list
+Registering op list_length
+Registering op list_write
+Registering op list_read
+Registering op list_gather
+Registering op list_scatter
+Registering op conv
+Registering op conv_quantized
+Registering op conv_transpose
+Registering op add
+Registering op equal
+Registering op floor_div
+Registering op greater
+Registering op greater_equal
+Registering op less
+Registering op less_equal
+Registering op logical_and
+Registering op logical_or
+Registering op logical_xor
+Registering op maximum
+Registering op minimum
+Registering op mod
+Registering op mul
+Registering op not_equal
+Registering op real_div
+Registering op pow
+Registering op sub
+Registering op upsample_nearest_neighbor
+Registering op resize_nearest_neighbor
+Registering op upsample_bilinear
+Registering op resize_bilinear
+Registering op crop_resize
+Registering op crop
+Registering op affine
+Registering op resample
+Registering op linear
+Registering op matmul
+Registering op einsum
+Registering op batch_norm
+Registering op instance_norm
+Registering op l2_norm
+Registering op layer_norm
+Registering op local_response_norm
+Registering op avg_pool
+Registering op l2_pool
+Registering op max_pool
+Registering op random_bernoulli
+Registering op random_categorical
+Registering op random_normal
+Registering op random_uniform
+Registering op gru
+Registering op lstm
+Registering op rnn
+Registering op reduce_argmax
+Registering op reduce_argmin
+Registering op reduce_l1_norm
+Registering op reduce_l2_norm
+Registering op reduce_log_sum
+Registering op reduce_log_sum_exp
+Registering op reduce_max
+Registering op reduce_mean
+Registering op reduce_min
+Registering op reduce_prod
+Registering op reduce_sum
+Registering op reduce_sum_square
+Registering op gather
+Registering op scatter
+Registering op gather_along_axis
+Registering op scatter_along_axis
+Registering op gather_nd
+Registering op scatter_nd
+Registering op band_part
+Registering op cumsum
+Registering op fill
+Registering op non_maximum_suppression
+Registering op non_zero
+Registering op one_hot
+Registering op pad
+Registering op range_1d
+Registering op tile
+Registering op argsort
+Registering op topk
+Registering op flatten2d
+Registering op shape
+Registering op concat
+Registering op split
+Registering op stack
+Registering op identity
+Registering op depth_to_space
+Registering op expand_dims
+Registering op reshape
+Registering op reverse
+Registering op reverse_sequence
+Registering op slice_by_index
+Registering op slice_by_size
+Registering op space_to_depth
+Registering op space_to_batch
+Registering op batch_to_space
+Registering op squeeze
+Registering op transpose
+Registering op pixel_shuffle
+Registering op sliding_windows
+Registering op constexpr_affine_dequantize
+Registering op constexpr_cast
+Registering op constexpr_lut_to_dense
+Registering op constexpr_sparse_to_dense
+Registering op resample
+Registering op upsample_bilinear
+Registering op crop_resize
+Registering op gather
+Registering op gather_nd
+Registering op fill_like
+Registering op topk
+Registering op reshape_like
+Registering op pixel_unshuffle
+Registering Dialect op tf_make_list
+Registering Dialect op tf_lstm_block_cell
+Registering Dialect op tf_lstm_block
+Registering Dialect op torch_upsample_nearest_neighbor
+Registering Dialect op torch_upsample_bilinear
+Registering Dialect op torch_tensor_assign
+Registering pass mil_backend::adjust_io_to_supported_types
+Registering pass mil_backend::fuse_activation_silu
+Registering pass mil_backend::insert_image_preprocessing_ops
+Registering pass common::image_input_preprocess
+Registering pass common::sanitize_input_output_names
+Registering pass common::update_output_dtypes
+Registering pass mil_backend::sanitize_name_strings
+Registering pass nn_backend::alert_return_type_cast
+Registering pass nn_backend::commingle_loop_vars
+Registering pass nn_backend::decompose_conv1d
+Registering pass nn_backend::handle_return_inputs_as_outputs
+Registering pass nn_backend::handle_return_unused_inputs
+Registering pass nn_backend::handle_unused_inputs
+Registering pass tensorflow2::remove_vacuous_cond
+Registering pass tensorflow::backfill_make_list_elem_type
+Registering pass tensorflow::expand_tf_lstm
+Registering pass tensorflow::tf_lstm_to_core_lstm
+Registering pass torch::torch_tensor_assign_to_core
+Registering pass torch::torch_upsample_to_core_upsample
+Registering pass common::const_elimination
+Registering pass common::dead_code_elimination
+Registering pass common::dedup_op_and_var_names
+Registering pass common::fuse_reduce_mean
+Registering pass common::loop_invariant_elimination
+Registering pass common::noop_elimination
+Registering pass common::remove_redundant_ops
+Registering pass common::remove_symbolic_reshape
+Registering pass common::topological_reorder
+Registering pass common::lower_complex_dialect_ops
+Registering pass common::fuse_gelu_exact
+Registering pass common::fuse_gelu_tanh_approximation
+Registering pass common::fuse_leaky_relu
+Registering pass common::fuse_prelu
+Registering pass common::prelu_to_lrelu
+Registering pass common::add_conv_transpose_output_shape
+Registering pass common::compose_conv1d
+Registering pass common::fuse_conv_batchnorm
+Registering pass common::fuse_conv_bias
+Registering pass common::fuse_conv_scale
+Registering pass common::fuse_pad_conv
+Registering pass common::divide_to_multiply
+Registering pass common::fuse_elementwise_to_batchnorm
+Registering pass common::rank0_expand_dims_swap
+Registering pass common::fuse_linear_bias
+Registering pass common::fuse_matmul_weight_bias
+Registering pass common::fuse_layernorm_or_instancenorm
+Registering pass common::merge_consecutive_paddings
+Registering pass common::merge_consecutive_transposes
+Registering pass common::merge_consecutive_relus
+Registering pass common::merge_consecutive_reshapes
+Registering pass common::cast_optimization
+Registering pass common::reduce_transposes
+Registering pass common::expand_high_rank_reshape_and_transpose
+Registering pass common::concat_to_pixel_shuffle
+Registering pass common::detect_concat_interleave
+Registering pass common::fuse_onehot_matmul_to_gather
+Registering pass common::replace_stack_reshape
+Registering pass common::use_reflection_padding
+Registering pass common::add_fp16_cast
+Loading ANN models/arabPers-WithDiffTypefaces.mlmodel	✓
+Detected jinja2 version: 3.1.5
+Detected librosa version: 0.10.2.post1
+Detected pandas version: 2.2.3
+Detected psutil version: 7.0.0
+Detected pygments version: 2.18.0
+Detected pytesseract version: 0.3.13
+Detected safetensors version: 0.4.5
+Detected scipy version: 1.16.0
+Detected soundfile version: 0.12.1
+Detected tokenizers version: 0.21.0
+Detected torchvision version: 0.16.2
+Detected torch version: 2.1.2
+Detected PIL version 11.3.0
+Detected torch version: 2.1.2
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+Binarizing	✓
+STREAM b'IHDR' 16 13
+STREAM b'IDAT' 41 65536
+Segmenting	✓
+STREAM b'IHDR' 16 13
+STREAM b'IDAT' 41 65536
+Processing ---------------------------------------- 100% 32/32 0:00:00 0:00:47
+Writing recognition results for TEMP\yamini\page-000.png	✓
+[2025-12-15 22:00:30,028] torch._dynamo.utils: [INFO] TorchDynamo compilation metrics:
+[2025-12-15 22:00:30,028] torch._dynamo.utils: [INFO] Function, Runtimes (s)

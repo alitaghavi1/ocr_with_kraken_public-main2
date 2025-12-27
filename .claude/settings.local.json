@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venvScriptspython.exe ocr_image.py \"examples\\\\yamini_full.jpg\" --print)",
+      "Bash(powershell:*)",
+      "Bash(cd:*)",
+      "Bash(cat:*)",
+      "Bash(du:*)",
+      "Bash(dir \"C:\\\\AR team\\\\Ali\\\\ocr_with_kraken_public-main\\\\models\\\\*.mlmodel\")",
+      "WebSearch",
+      "WebFetch(domain:bl.iro.bl.uk)",
+      "Bash(.venvScriptspython.exe download_bl_dataset.py)",
+      "WebFetch(domain:zenodo.org)",
+      "WebFetch(domain:openiti.org)",
+      "WebFetch(domain:kitab-project.org)",
+      "WebFetch(domain:github.com)",
+      "Bash(dir \"C:\\\\AR team\\\\Ali\\\\ocr_with_kraken_public-main\\\\training_data_lines\\\\badam\" /s /b)",
+      "WebFetch(domain:arxiv.org)",
+      "Bash(.venv/Scripts/python.exe:*)",
+      "Bash(.venv/Scripts/ketos.exe train:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:ieeexplore.ieee.org)",
+      "WebFetch(domain:users.encs.concordia.ca)",
+      "Bash(.venv\\\\\\\\Scripts\\\\\\\\python.exe:*)",
+      "Bash(dir /b \"C:\\\\AR team\\\\Ali\\\\ocr_with_kraken_public-main\")",
+      "Bash(findstr:*)",
+      "Bash(dir \"C:\\\\AR team\\\\Ali\\\\Bitbucket\\\\olsolve\" /b)",
+      "Bash(.venvScriptspython.exe parse_logs.py)",
+      "Bash(dir \"C:\\\\AR team\\\\Ali\\\\ocr_with_kraken_public-main\\\\training_data_lines\\\\balanced_training\" /s /b)",
+      "Bash(.venvScriptspip.exe install -r requirements.txt)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(cmd /c \"set PATH=%PATH%;C:\\\\Program Files\\\\NVIDIA GPU Computing Toolkit\\\\CUDA\\\\v13.0\\\\bin && .venv\\\\Scripts\\\\python.exe -c \"\"import torch; print\\(''CUDA available:'', torch.cuda.is_available\\(\\)\\)\"\"\")"
+    ]
+  }
+}

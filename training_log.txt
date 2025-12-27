@@ -1,0 +1,96 @@
+============================================================
+Kraken OCR Fine-Tuning for Handwritten Data
+============================================================
+Training started: 2025-12-26 21:15:38.012045
+Mode: finetune
+Training from scratch
+Training samples: 266390
+Device: cuda:0
+Batch size: 48
+Learning rate: 0.0002
+Max epochs: 50
+============================================================
+
+Command: C:\Ali\ocr_with_kraken_public-main\.venv\Scripts\ketos.exe -d cuda:0 train -o models/fine_tuned -f path -B 48 -N 50 --lag 10 -r 0.0002 --augment --schedule reduceonplateau -F 1 --spec [1,120,0,1 Cr3,13,32 Do0.1,2 Mp2,2 Cr3,13,64 Do0.1,2 Mp2,2 S1(1x0)1,3 Lbx200 Do0.1,2 Lbx200 Do0.1,2 O2s1c{chars}] handwritten_training_data/*.png
+
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+`Trainer(val_check_interval=1.0)` was configured so validation will run at the end of the training epoch..
+You are using a CUDA device ('NVIDIA GeForce RTX 5080') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+┌────┬───────────┬──────────────┬────────┬───────┬──────────────┬─────────────┐
+│    │ Name      │ Type         │ Params │ Mode  │     In sizes │   Out sizes │
+├────┼───────────┼──────────────┼────────┼───────┼──────────────┼─────────────┤
+│ 0  │ val_cer   │ CharErrorRa… │      0 │ train │            ? │           ? │
+│ 1  │ val_wer   │ WordErrorRa… │      0 │ train │            ? │           ? │
+│ 2  │ net       │ MultiParamS… │  4.4 M │ train │ [[1, 1, 120, │ [[1, 53, 1, │
+│    │           │              │        │       │   400], '?'] │  100], '?'] │
+│ 3  │ net.C_0   │ ActConv2D    │  1.3 K │ train │ [[1, 1, 120, │    [[1, 32, │
+│    │           │              │        │       │   400], '?', │  120, 400], │
+│    │           │              │        │       │         '?'] │        '?'] │
+│ 4  │ net.Do_1  │ Dropout      │      0 │ train │     [[1, 32, │    [[1, 32, │
+│    │           │              │        │       │   120, 400], │  120, 400], │
+│    │           │              │        │       │    '?', '?'] │        '?'] │
+│ 5  │ net.Mp_2  │ MaxPool      │      0 │ train │     [[1, 32, │    [[1, 32, │
+│    │           │              │        │       │   120, 400], │   60, 200], │
+│    │           │              │        │       │    '?', '?'] │        '?'] │
+│ 6  │ net.C_3   │ ActConv2D    │ 79.9 K │ train │ [[1, 32, 60, │    [[1, 64, │
+│    │           │              │        │       │   200], '?', │   60, 200], │
+│    │           │              │        │       │         '?'] │        '?'] │
+│ 7  │ net.Do_4  │ Dropout      │      0 │ train │ [[1, 64, 60, │    [[1, 64, │
+│    │           │              │        │       │   200], '?', │   60, 200], │
+│    │           │              │        │       │         '?'] │        '?'] │
+│ 8  │ net.Mp_5  │ MaxPool      │      0 │ train │ [[1, 64, 60, │    [[1, 64, │
+│    │           │              │        │       │   200], '?', │   30, 100], │
+│    │           │              │        │       │         '?'] │        '?'] │
+│ 9  │ net.S_6   │ Reshape      │      0 │ train │ [[1, 64, 30, │  [[1, 1920, │
+│    │           │              │        │       │   100], '?', │    1, 100], │
+│    │           │              │        │       │         '?'] │        '?'] │
+│ 10 │ net.L_7   │ TransposedS… │  3.4 M │ train │   [[1, 1920, │   [[1, 400, │
+│    │           │              │        │       │     1, 100], │    1, 100], │
+│    │           │              │        │       │    '?', '?'] │        '?'] │
+│ 11 │ net.Do_8  │ Dropout      │      0 │ train │ [[1, 400, 1, │   [[1, 400, │
+│    │           │              │        │       │   100], '?', │    1, 100], │
+│    │           │              │        │       │         '?'] │        '?'] │
+│ 12 │ net.L_9   │ TransposedS… │  963 K │ train │ [[1, 400, 1, │   [[1, 400, │
+│    │           │              │        │       │   100], '?', │    1, 100], │
+│    │           │              │        │       │         '?'] │        '?'] │
+│ 13 │ net.Do_10 │ Dropout      │      0 │ train │ [[1, 400, 1, │   [[1, 400, │
+│    │           │              │        │       │   100], '?', │    1, 100], │
+│    │           │              │        │       │         '?'] │        '?'] │
+│ 14 │ net.s_11  │ ActConv2D    │    401 │ train │ [[1, 400, 1, │  [[1, 1, 1, │
+│    │           │              │        │       │   100], '?', │  100], '?'] │
+│    │           │              │        │       │         '?'] │             │
+│ 15 │ net.O_12  │ LinSoftmax   │    106 │ train │   [[1, 1, 1, │ [[1, 53, 1, │
+│    │           │              │        │       │   100], '?', │  100], '?'] │
+│    │           │              │        │       │         '?'] │             │
+└────┴───────────┴──────────────┴────────┴───────┴──────────────┴─────────────┘
+Trainable params: 4.4 M                                                        
+Non-trainable params: 0                                                        
+Total params: 4.4 M                                                            
+Total estimated model params size (MB): 17                                     
+Modules in train mode: 29                                                      
+Modules in eval mode: 0                                                        
+Seed set to 42
+C:\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\kraken\lib\lineest.py:84: RuntimeWarning: invalid value encountered in divide
+  temp = temp*1.0/np.amax(temp)
+C:\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\kraken\lib\lineest.py:84: RuntimeWarning: invalid value encountered in divide
+  temp = temp*1.0/np.amax(temp)
+C:\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\kraken\lib\lineest.py:84: RuntimeWarning: invalid value encountered in divide
+  temp = temp*1.0/np.amax(temp)
+C:\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\kraken\lib\lineest.py:84: RuntimeWarning: invalid value encountered in divide
+  temp = temp*1.0/np.amax(temp)
+C:\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\kraken\lib\lineest.py:84: RuntimeWarning: invalid value encountered in divide
+  temp = temp*1.0/np.amax(temp)
+C:\Ali\ocr_with_kraken_public-main\.venv\Lib\site-packages\kraken\lib\lineest.py:84: RuntimeWarning: invalid value encountered in divide
+  temp = temp*1.0/np.amax(temp)
+
+Detected KeyboardInterrupt, attempting graceful shutdown ...
+stage 0/∞ ---------   4528/4995 0:06:44 •   10.80it/s train_loss… early_stoppi…
+                                0:00:44               1508.552    0/10 -inf    
+forrtl: error (200): program aborting due to control-C event
+Image              PC                Routine            Line        Source             
+KERNELBASE.dll     00007FF96895B99D  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FF96A86E8D7  Unknown               Unknown  Unknown
+ntdll.dll          00007FF96B54C53C  Unknown               Unknown  Unknown
