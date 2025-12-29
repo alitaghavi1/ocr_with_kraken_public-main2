@@ -15,3 +15,10 @@ combined_training/*
 ganjoor_epub/*.epub
 ganjoor_texts/*.txt
 OUTPUT/*.txt
+
+# Large files removed from history
+examples/masnavi.pdf
+ocr_context_model.pkl
+examples/Teimour nameh.pdf
+examples/yousef zoleykha.pdf
+examples/Ajayeb makhlooghat.pdf
