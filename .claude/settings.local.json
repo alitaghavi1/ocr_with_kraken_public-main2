@@ -29,7 +29,9 @@
       "Bash(dir \"C:\\\\AR team\\\\Ali\\\\ocr_with_kraken_public-main\\\\training_data_lines\\\\balanced_training\" /s /b)",
       "Bash(.venvScriptspip.exe install -r requirements.txt)",
       "WebFetch(domain:api.github.com)",
-      "Bash(cmd /c \"set PATH=%PATH%;C:\\\\Program Files\\\\NVIDIA GPU Computing Toolkit\\\\CUDA\\\\v13.0\\\\bin && .venv\\\\Scripts\\\\python.exe -c \"\"import torch; print\\(''CUDA available:'', torch.cuda.is_available\\(\\)\\)\"\"\")"
+      "Bash(cmd /c \"set PATH=%PATH%;C:\\\\Program Files\\\\NVIDIA GPU Computing Toolkit\\\\CUDA\\\\v13.0\\\\bin && .venv\\\\Scripts\\\\python.exe -c \"\"import torch; print\\(''CUDA available:'', torch.cuda.is_available\\(\\)\\)\"\"\")",
+      "Bash(dir:*)",
+      "WebFetch(domain:epub.ganjoor.net)"
     ]
   }
 }

@@ -21,7 +21,7 @@ echo Starting training...
 .venv\Scripts\ketos.exe -d cuda:0 train ^
     -o models/line_finetuned ^
     -f path ^
-    -B 16 ^
+    -B 8 ^
     -N 50 ^
     --lag 10 ^
     -r 0.0001 ^

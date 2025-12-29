@@ -11,3 +11,7 @@ handwritten_training_data - 30k/*
 training_data_words/*
 training_data_lines/Arshasb_7k/*
 training_data_lines/*
+combined_training/*
+ganjoor_epub/*.epub
+ganjoor_texts/*.txt
+OUTPUT/*.txt
