@@ -31,7 +31,16 @@
       "WebFetch(domain:api.github.com)",
       "Bash(cmd /c \"set PATH=%PATH%;C:\\\\Program Files\\\\NVIDIA GPU Computing Toolkit\\\\CUDA\\\\v13.0\\\\bin && .venv\\\\Scripts\\\\python.exe -c \"\"import torch; print\\(''CUDA available:'', torch.cuda.is_available\\(\\)\\)\"\"\")",
       "Bash(dir:*)",
-      "WebFetch(domain:epub.ganjoor.net)"
+      "WebFetch(domain:epub.ganjoor.net)",
+      "Bash(.venvScriptspython.exe -c \"with open\\(''ganjoor_texts/hafez.txt'', ''r'', encoding=''utf-8''\\) as f: lines = f.readlines\\(\\)[:30]; print\\(''''.join\\(lines\\)\\)\")",
+      "Bash(\".venv\\\\Scripts\\\\python.exe\":*)",
+      "WebFetch(domain:humansintheloop.org)",
+      "WebFetch(domain:data.mendeley.com)",
+      "Bash(\".venv\\\\Scripts\\\\python.exe\" -c \"\nimport shutil\nfrom pathlib import Path\n\nmendeley_dir = Path\\(''training_data_lines/mendeley_lines''\\)\nif mendeley_dir.exists\\(\\):\n    shutil.rmtree\\(mendeley_dir\\)\n    print\\(''Removed mendeley_lines folder''\\)\n\")",
+      "Bash(\".venv\\\\Scripts\\\\python.exe\" -c \"\nfrom kraken.lib import models\nfrom kraken import rpred\nhelp\\(rpred.rpred\\)\n\")",
+      "Bash(\".venv\\\\Scripts\\\\python.exe\" -c \"\nfrom kraken.containers import ocr_record\nprint\\(''ocr_record fields:''\\)\nimport inspect\nprint\\(inspect.signature\\(ocr_record\\)\\)\n\n# Also check BaselineOCRRecord\nfrom kraken.containers import BaselineOCRRecord\nprint\\(''\\\\nBaselineOCRRecord fields:''\\)\nprint\\([f for f in dir\\(BaselineOCRRecord\\) if not f.startswith\\(''_''\\)]\\)\n\")",
+      "Bash(\".venv\\\\Scripts\\\\python.exe\" ocr_image.py \"examples\\\\masnavi_2a.png\" -m \"models\\\\line_finetuned_91.mlmodel\" --print)",
+      "Bash(\".venv\\\\Scripts\\\\python.exe\" -c:*)"
     ]
   }
 }

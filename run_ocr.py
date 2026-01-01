@@ -11,7 +11,7 @@ os.environ['PYTHONIOENCODING'] = 'utf-8'
 
 img_path = "TEMP/yamini/yamini_000.png"
 output_path = "TEMP/yamini/yamini_000.txt"
-model_path = "models/arabPers-WithDiffTypefaces.mlmodel"
+model_path = "models/line_finetuned_91.mlmodel"
 
 # Run kraken command and capture output
 cmd = [
